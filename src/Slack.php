@@ -63,7 +63,7 @@ class Slack implements LoggerInterface
 		if (!empty($this->applicationUrl)) {
 			$text .= sprintf(' (%s)', $this->applicationUrl);
 		}
-		$text .= sprintf(': ```%s```', $message);
+		$text .= sprintf(":\n```\n%s\n```", $message);
 
 		$data = new stdClass();
 		$data->text = $text;
